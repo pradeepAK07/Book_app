@@ -1,0 +1,18 @@
+.card {
+  padding: 10px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  height: 300px;
+  width: 300px;
+  margin: 20px;
+  background-color: #787443;
+  color: #fdfbf4;
+  border-radius: 5px;
+}
+.card-image {
+  width: 109px;
+  border-radius: 5px;
+  height: 105px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}
