@@ -16,41 +16,51 @@ export const Hero = () => {
       .then((res) => setBookData(res.data.items))
       .catch((res) => console.log(res));
   };
+
   return (
-    <div className="container">
-      <div className="heading-container">
-        <h1 className="heading">Book Collections</h1>
-      </div>
-      <div className="input-container">
-        <input
-          type="search"
-          className="input-search"
-          placeholder="enter the book name..."
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-        />
-        <br />
-        <button className="btn" onClick={getBook}>
-          Search Book
-        </button>
-      </div>
-      <div className="quote-container">
-        <h4 className="quote">
-          A book without a room is a human without soul.
-        </h4>
-      </div>
-      <div className="image-container">
-        <img
-          className="image"
-          src="https://images.pexels.com/photos/7034389/pexels-photo-7034389.jpeg?auto=compress&cs=tinysrgb&w=600"
-          alt="book"
-        />
+    <>
+      <div className="container">
+        <div className="heading-container">
+          <h1 className="heading">Book Collections</h1>
+        </div>
+        <div className="main">
+          <div className="q1-container">
+            <h2 className="q1">Find your book of choice</h2>
+          </div>
+          <div className="quote-container">
+            <h4 className="quote">
+              "Books are the quietest and most constant of friends; they are the
+              most accessible and wisest of counselors, and the most patient of
+              teachers." - Charles William Eliot
+            </h4>
+          </div>
+          <div className="input-container">
+            <input
+              type="search"
+              className="input-search"
+              placeholder="enter the book name..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+            />
+            <br />
+            <button className="btn" onClick={getBook}>
+              Search Book
+            </button>
+          </div>
+          <div className="img-container">
+            <img
+              className="image"
+              src="https://images.pexels.com/photos/1106468/pexels-photo-1106468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="bookimage"
+            />
+          </div>
+        </div>
       </div>
       <div className="card-container">
         {bookData.map((items) => {
-          return <Cards items={items} />;
+          return <Cards items={items} showModal={false} />;
         })}
       </div>
-    </div>
+    </>
   );
 };

@@ -1,18 +1,76 @@
 .card {
-  padding: 10px;
+  padding: 5px;
+  padding-bottom: 10px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
-  height: 300px;
+  min-height: 300px;
   width: 300px;
   margin: 20px;
-  background-color: #787443;
+  background-color: #5c5959;
   color: #fdfbf4;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 .card-image {
-  width: 109px;
+  width: 110px;
   border-radius: 5px;
-  height: 105px;
+  height: 110px;
   background-repeat: no-repeat;
   object-fit: cover;
+}
+.see-more {
+  background-color: #ece7e7;
+  border: #e2dcdc;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  position: static;
+  width: 700px;
+  height: 70vh;
+  overflow: auto;
+  margin: 0 auto;
+  margin-top: 20px; /* Adjust the margin top value to position the modal */
+  padding: 20px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.modal-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sub-right {
+  width: 350px;
+}
+.desc-container {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+.sub-left {
+  width: 200px;
+}
+.sub-left img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.desc-para {
+  margin: 0px 0px;
+}
+.desc {
+  margin: 0px 0px;
 }

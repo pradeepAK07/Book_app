@@ -3,7 +3,7 @@ import { Hero } from "./components/Hero/Hero";
 
 function App() {
   return (
-    <div className="App" style={{ height: "100vh", width: "100vw" }}>
+    <div className="App">
       <Hero />
     </div>
   );
