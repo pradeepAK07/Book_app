@@ -6,9 +6,13 @@
   min-height: 300px;
   width: 300px;
   margin: 20px;
-  background-color: #5c5959;
-  color: #fdfbf4;
+  background-color: #2b7a78;
+  color: #f1f1f1;
   border-radius: 20px;
+}
+.card:hover {
+  box-shadow: 3px 2px 8px 5px rgb(75, 74, 74);
+  transition: 0.3s;
 }
 .card-image {
   width: 110px;
@@ -18,11 +22,12 @@
   object-fit: cover;
 }
 .see-more {
-  background-color: #ece7e7;
+  background-color: #f7fffc;
+  color: rgb(16, 17, 17);
   border: #e2dcdc;
   cursor: pointer;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 .modal-overlay {
   position: fixed;
@@ -56,6 +61,7 @@
   width: 350px;
 }
 .desc-container {
+  padding-right: 5px;
   max-height: 300px;
   overflow-y: scroll;
 }
@@ -73,4 +79,23 @@
 }
 .desc {
   margin: 0px 0px;
+}
+@media (max-width: 567px) {
+  .modal-content {
+    position: static;
+    width: 400px;
+    height: 80vh;
+    overflow: auto;
+    margin: 0 auto;
+    margin-top: 20px; /* Adjust the margin top value to position the modal */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .sub-left {
+    width: 150px;
+    margin-right: 20px;
+  }
 }

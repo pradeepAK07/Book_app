@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Hero.css";
 import { Cards } from "../Cards/Cards";
 import axios from "axios";
@@ -8,7 +8,7 @@ export const Hero = () => {
   const [bookData, setBookData] = useState([]);
   const api_key = "AIzaSyCa2uVlMae3qsdsgmrTM8eEcKhUz0BBWeU";
   console.log(bookData);
-  const getBook = () => {
+  const getBook = async () => {
     axios
       .get(
         `https://www.googleapis.com/books/v1/volumes?q=${input}&key=${api_key}`
@@ -17,6 +17,9 @@ export const Hero = () => {
       .catch((res) => console.log(res));
   };
 
+  useEffect(() => {
+    getBook();
+  }, []);
   return (
     <>
       <div className="container">

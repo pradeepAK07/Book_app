@@ -23,9 +23,11 @@ export const Cards = ({ items }) => {
   const subtitle = items.volumeInfo.subtitle
     ? items.volumeInfo.subtitle
     : "No subtitle available";
+
   const publisher = items.volumeInfo.publisher
     ? items.volumeInfo.publisher
     : "No data available";
+
   const closeModal = () => {
     setIsOpen(false);
   };
