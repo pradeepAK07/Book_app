@@ -28,6 +28,9 @@ export const Cards = ({ items }) => {
     ? items.volumeInfo.publisher
     : "No data available";
 
+  const author = items.volumeInfo.authors
+    ? items.volumeInfo.authors[0]
+    : " No data ";
   const closeModal = () => {
     setIsOpen(false);
   };
@@ -37,7 +40,7 @@ export const Cards = ({ items }) => {
       <h3 className="book-name">{newTitle}</h3>
       <img className="card-image" src={thumbnail} alt="unloaded_image" />
       <p>page count: {items.volumeInfo.pageCount}</p>
-      <p className="author">author: {items.volumeInfo.authors[0]}</p>
+      <p className="author">author: {author}</p>
       <button className="see-more" onClick={() => setIsOpen(true)}>
         Read more ..
       </button>
